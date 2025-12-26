@@ -1,316 +1,120 @@
 Collecting fastapi>=0.100.0 (from -r requirements.txt (line 4))
-  Using cached fastapi-0.123.8-py3-none-any.whl.metadata (30 kB)
+  Using cached fastapi-0.125.0-py3-none-any.whl.metadata (30 kB)
 Collecting uvicorn>=0.23.0 (from uvicorn[standard]>=0.23.0->-r requirements.txt (line 5))
-  Using cached uvicorn-0.33.0-py3-none-any.whl.metadata (6.6 kB)
+  Using cached uvicorn-0.38.0-py3-none-any.whl.metadata (6.8 kB)
 Collecting python-multipart>=0.0.6 (from -r requirements.txt (line 6))
-  Using cached python_multipart-0.0.20-py3-none-any.whl.metadata (1.8 kB)
+  Using cached python_multipart-0.0.21-py3-none-any.whl.metadata (1.8 kB)
 Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Using cached pydantic-2.10.6-py3-none-any.whl.metadata (30 kB)
+  Using cached pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
 Collecting pydantic-settings>=1.10.0 (from -r requirements.txt (line 9))
-  Using cached pydantic_settings-2.8.1-py3-none-any.whl.metadata (3.5 kB)
+  Using cached pydantic_settings-2.12.0-py3-none-any.whl.metadata (3.4 kB)
 Collecting sqlalchemy<2.0.0,>=1.4.0 (from -r requirements.txt (line 12))
-  Using cached sqlalchemy-1.4.54.tar.gz (8.5 MB)
-  Installing build dependencies: started
-  Installing build dependencies: finished with status 'done'
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status 'done'
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status 'done'
+  Using cached SQLAlchemy-1.4.54-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
 Collecting alembic<2.0.0,>=1.10.0 (from -r requirements.txt (line 13))
-  Using cached alembic-1.14.1-py3-none-any.whl.metadata (7.4 kB)
+  Using cached alembic-1.17.2-py3-none-any.whl.metadata (7.2 kB)
 Collecting psycopg2-binary>=2.9.0 (from -r requirements.txt (line 14))
-  Using cached psycopg2_binary-2.9.10-cp38-cp38-macosx_11_0_universal2.whl
+  Using cached psycopg2_binary-2.9.11-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
 Collecting pgvector>=0.2.0 (from -r requirements.txt (line 15))
-  Using cached pgvector-0.3.6-py3-none-any.whl.metadata (13 kB)
+  Using cached pgvector-0.4.2-py3-none-any.whl.metadata (19 kB)
 Collecting numpy<1.25.0,>=1.19.0 (from -r requirements.txt (line 18))
-  Using cached numpy-1.24.4-cp38-cp38-macosx_11_0_arm64.whl.metadata (5.6 kB)
-Collecting pandas<2.0.0,>=1.3.0 (from -r requirements.txt (line 19))
-  Using cached pandas-1.5.3-cp38-cp38-macosx_11_0_arm64.whl.metadata (11 kB)
-Collecting scikit-learn<1.4.0,>=1.0.0 (from -r requirements.txt (line 20))
-  Using cached scikit_learn-1.3.2-cp38-cp38-macosx_12_0_arm64.whl.metadata (11 kB)
-Collecting scipy<1.11.0,>=1.7.0 (from -r requirements.txt (line 21))
-  Using cached scipy-1.10.1-cp38-cp38-macosx_12_0_arm64.whl.metadata (53 kB)
-Collecting tensorflow<=2.13.0,>=2.8.0 (from -r requirements.txt (line 25))
-  Using cached tensorflow-2.13.0-cp38-cp38-macosx_12_0_arm64.whl.metadata (2.6 kB)
-Collecting torch<2.0.0,>=1.12.0 (from -r requirements.txt (line 26))
-  Using cached torch-1.13.1-cp38-none-macosx_11_0_arm64.whl.metadata (23 kB)
-Collecting transformers<4.38.0,>=4.20.0 (from -r requirements.txt (line 27))
-  Using cached transformers-4.37.2-py3-none-any.whl.metadata (129 kB)
-Collecting sentence-transformers<2.3.0,>=2.2.0 (from -r requirements.txt (line 28))
-  Using cached sentence-transformers-2.2.2.tar.gz (85 kB)
+  Using cached numpy-1.24.4.tar.gz (10.9 MB)
   Installing build dependencies: started
   Installing build dependencies: finished with status 'done'
   Getting requirements to build wheel: started
   Getting requirements to build wheel: finished with status 'done'
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status 'done'
-Collecting opencv-python<4.10.0,>=4.5.0 (from -r requirements.txt (line 31))
-  Using cached opencv_python-4.9.0.80-cp37-abi3-macosx_11_0_arm64.whl.metadata (20 kB)
-Collecting Pillow<11.0.0,>=9.0.0 (from -r requirements.txt (line 32))
-  Using cached pillow-10.4.0-cp38-cp38-macosx_11_0_arm64.whl.metadata (9.2 kB)
-Collecting imageio<2.34.0,>=2.20.0 (from -r requirements.txt (line 33))
-  Using cached imageio-2.33.1-py3-none-any.whl.metadata (4.9 kB)
-Collecting spacy<3.8.0,>=3.4.0 (from -r requirements.txt (line 36))
-  Using cached spacy-3.7.5-cp38-cp38-macosx_11_0_arm64.whl.metadata (27 kB)
-Collecting nltk<3.9.0,>=3.7.0 (from -r requirements.txt (line 37))
-  Using cached nltk-3.8.1-py3-none-any.whl.metadata (2.8 kB)
-Collecting textblob<0.18.0,>=0.17.0 (from -r requirements.txt (line 38))
-  Using cached textblob-0.17.1-py2.py3-none-any.whl.metadata (4.2 kB)
-Collecting statsmodels<0.15.0,>=0.13.0 (from -r requirements.txt (line 41))
-  Using cached statsmodels-0.14.1-cp38-cp38-macosx_11_0_arm64.whl.metadata (9.5 kB)
-Collecting prophet<1.2.0,>=1.1.0 (from -r requirements.txt (line 42))
-  Using cached prophet-1.1.7-py3-none-macosx_11_0_arm64.whl.metadata (3.5 kB)
-Collecting pmdarima<2.1.0,>=2.0.0 (from -r requirements.txt (line 43))
-  Using cached pmdarima-2.0.4-cp38-cp38-macosx_11_0_arm64.whl.metadata (7.8 kB)
-Collecting implicit<0.7.0,>=0.5.0 (from -r requirements.txt (line 46))
-  Using cached implicit-0.6.2-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.1 kB)
-Collecting scikit-surprise<1.2.0,>=1.1.0 (from -r requirements.txt (line 47))
-  Using cached scikit_surprise-1.1.4-cp38-cp38-macosx_11_0_universal2.whl
-Collecting category-encoders<2.7.0,>=2.5.0 (from -r requirements.txt (line 50))
-  Using cached category_encoders-2.6.4-py2.py3-none-any.whl.metadata (8.0 kB)
-Collecting feature-engine<1.7.0,>=1.5.0 (from -r requirements.txt (line 51))
-  Using cached feature_engine-1.6.2-py2.py3-none-any.whl.metadata (8.8 kB)
-Collecting xgboost<2.0.0,>=1.6.0 (from -r requirements.txt (line 54))
-  Using cached xgboost-1.7.6-py3-none-macosx_12_0_arm64.whl.metadata (1.9 kB)
-Collecting lightgbm<4.0.0,>=3.3.0 (from -r requirements.txt (line 55))
-  Using cached lightgbm-3.3.5.tar.gz (1.5 MB)
-  Installing build dependencies: started
-  Installing build dependencies: finished with status 'done'
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status 'done'
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status 'done'
-Collecting catboost<1.3.0,>=1.1.0 (from -r requirements.txt (line 56))
-  Using cached catboost-1.2.8-cp38-cp38-macosx_11_0_universal2.whl.metadata (1.2 kB)
-Collecting imbalanced-learn<0.11.0,>=0.10.0 (from -r requirements.txt (line 57))
-  Using cached imbalanced_learn-0.10.1-py3-none-any.whl.metadata (8.2 kB)
-Collecting faiss-cpu<1.8.0,>=1.7.0 (from -r requirements.txt (line 60))
-  Using cached faiss_cpu-1.7.4-cp38-cp38-macosx_11_0_arm64.whl.metadata (1.3 kB)
-Collecting chromadb<0.5.0,>=0.3.0 (from -r requirements.txt (line 61))
-  Using cached chromadb-0.4.24-py3-none-any.whl.metadata (7.3 kB)
-Collecting httpx<0.27.0,>=0.24.0 (from -r requirements.txt (line 64))
-  Using cached httpx-0.26.0-py3-none-any.whl.metadata (7.6 kB)
-Collecting aiohttp<4.0.0,>=3.8.0 (from -r requirements.txt (line 65))
-  Using cached aiohttp-3.10.11-cp38-cp38-macosx_11_0_arm64.whl.metadata (7.7 kB)
-Collecting requests<3.0.0,>=2.28.0 (from -r requirements.txt (line 66))
-  Using cached requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
-Collecting python-dotenv<1.1.0,>=0.19.0 (from -r requirements.txt (line 69))
-  Using cached python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
-Collecting python-jose<3.4.0,>=3.3.0 (from python-jose[cryptography]<3.4.0,>=3.3.0->-r requirements.txt (line 70))
-  Using cached python_jose-3.3.0-py2.py3-none-any.whl.metadata (5.4 kB)
-Collecting passlib<1.8.0,>=1.7.0 (from passlib[bcrypt]<1.8.0,>=1.7.0->-r requirements.txt (line 71))
-  Using cached passlib-1.7.4-py2.py3-none-any.whl.metadata (1.7 kB)
-Collecting python-dateutil<3.0.0,>=2.8.0 (from -r requirements.txt (line 72))
-  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
-Collecting pytz>=2022.0 (from -r requirements.txt (line 73))
-  Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
-Collecting prometheus-client<0.20.0,>=0.16.0 (from -r requirements.txt (line 76))
-  Using cached prometheus_client-0.19.0-py3-none-any.whl.metadata (1.8 kB)
-Collecting structlog<25.0.0,>=22.0.0 (from -r requirements.txt (line 77))
-  Using cached structlog-24.4.0-py3-none-any.whl.metadata (7.3 kB)
-Collecting pytest<8.0.0,>=7.0.0 (from -r requirements.txt (line 80))
-  Using cached pytest-7.4.4-py3-none-any.whl.metadata (7.9 kB)
-Collecting pytest-asyncio<0.24.0,>=0.20.0 (from -r requirements.txt (line 81))
-  Using cached pytest_asyncio-0.23.8-py3-none-any.whl.metadata (3.9 kB)
-Collecting starlette<0.51.0,>=0.40.0 (from fastapi>=0.100.0->-r requirements.txt (line 4))
-  Using cached starlette-0.44.0-py3-none-any.whl.metadata (6.3 kB)
-Collecting typing-extensions>=4.8.0 (from fastapi>=0.100.0->-r requirements.txt (line 4))
-  Using cached typing_extensions-4.13.2-py3-none-any.whl.metadata (3.0 kB)
-Collecting annotated-doc>=0.0.2 (from fastapi>=0.100.0->-r requirements.txt (line 4))
-  Using cached annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
-Collecting click>=7.0 (from uvicorn>=0.23.0->uvicorn[standard]>=0.23.0->-r requirements.txt (line 5))
-  Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
-Collecting h11>=0.8 (from uvicorn>=0.23.0->uvicorn[standard]>=0.23.0->-r requirements.txt (line 5))
-  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
-Collecting annotated-types>=0.6.0 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
-Collecting pydantic-core==2.27.2 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Using cached pydantic_core-2.27.2-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.6 kB)
-Collecting Mako (from alembic<2.0.0,>=1.10.0->-r requirements.txt (line 13))
-  Using cached mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
-Collecting importlib-metadata (from alembic<2.0.0,>=1.10.0->-r requirements.txt (line 13))
-  Using cached importlib_metadata-8.5.0-py3-none-any.whl.metadata (4.8 kB)
-Collecting importlib-resources (from alembic<2.0.0,>=1.10.0->-r requirements.txt (line 13))
-  Using cached importlib_resources-6.4.5-py3-none-any.whl.metadata (4.0 kB)
-Collecting joblib>=1.1.1 (from scikit-learn<1.4.0,>=1.0.0->-r requirements.txt (line 20))
-  Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
-Collecting threadpoolctl>=2.0.0 (from scikit-learn<1.4.0,>=1.0.0->-r requirements.txt (line 20))
-  Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
-Collecting tensorflow-macos==2.13.0 (from tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached tensorflow_macos-2.13.0-cp38-cp38-macosx_12_0_arm64.whl.metadata (3.2 kB)
-Collecting absl-py>=1.0.0 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
-Collecting astunparse>=1.6.0 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
-Collecting flatbuffers>=23.1.21 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached flatbuffers-25.9.23-py2.py3-none-any.whl.metadata (875 bytes)
-Collecting gast<=0.4.0,>=0.2.1 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached gast-0.4.0-py3-none-any.whl.metadata (1.1 kB)
-Collecting google-pasta>=0.1.1 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
-Collecting h5py>=2.9.0 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached h5py-3.11.0-cp38-cp38-macosx_11_0_arm64.whl.metadata (2.5 kB)
-Collecting libclang>=13.0.0 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached libclang-18.1.1-1-py2.py3-none-macosx_11_0_arm64.whl.metadata (5.2 kB)
-Collecting numpy<1.25.0,>=1.19.0 (from -r requirements.txt (line 18))
-  Using cached numpy-1.24.3-cp38-cp38-macosx_11_0_arm64.whl.metadata (5.6 kB)
-Collecting opt-einsum>=2.3.2 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
-Collecting packaging (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
-Collecting protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached protobuf-4.25.8-cp37-abi3-macosx_10_9_universal2.whl.metadata (541 bytes)
-Requirement already satisfied: setuptools in ./venv/lib/python3.8/site-packages (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25)) (56.0.0)
-Collecting six>=1.12.0 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
-Collecting termcolor>=1.1.0 (from tensorflow-macos==2.13.0->tensorflow<=2.13.0,>=2.8.0->-r requirements.txt (line 25))
-  Using cached termcolor-2.4.0-py3-none-any.whl.metadata (6.1 kB)
-INFO: pip is looking at multiple versions of tensorflow-macos to determine which version is compatible with other requirements. This could take a while.
-Collecting alembic<2.0.0,>=1.10.0 (from -r requirements.txt (line 13))
-  Downloading alembic-1.14.0-py3-none-any.whl.metadata (7.4 kB)
-  Downloading alembic-1.13.3-py3-none-any.whl.metadata (7.4 kB)
-  Downloading alembic-1.13.2-py3-none-any.whl.metadata (7.4 kB)
-  Downloading alembic-1.13.1-py3-none-any.whl.metadata (7.4 kB)
-  Downloading alembic-1.13.0-py3-none-any.whl.metadata (7.4 kB)
-  Using cached alembic-1.12.1-py3-none-any.whl.metadata (7.3 kB)
-  Downloading alembic-1.12.0-py3-none-any.whl.metadata (7.2 kB)
-INFO: pip is still looking at multiple versions of tensorflow-macos to determine which version is compatible with other requirements. This could take a while.
-  Downloading alembic-1.11.3-py3-none-any.whl.metadata (7.2 kB)
-  Downloading alembic-1.11.2-py3-none-any.whl.metadata (7.2 kB)
-  Downloading alembic-1.11.1-py3-none-any.whl.metadata (7.2 kB)
-  Downloading alembic-1.11.0-py3-none-any.whl.metadata (7.2 kB)
-  Downloading alembic-1.10.4-py3-none-any.whl.metadata (7.2 kB)
-INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
-  Downloading alembic-1.10.3-py3-none-any.whl.metadata (7.2 kB)
-  Downloading alembic-1.10.2-py3-none-any.whl.metadata (7.2 kB)
-  Downloading alembic-1.10.1-py3-none-any.whl.metadata (7.2 kB)
-  Downloading alembic-1.10.0-py3-none-any.whl.metadata (7.2 kB)
-Collecting pydantic-settings>=1.10.0 (from -r requirements.txt (line 9))
-  Using cached pydantic_settings-2.8.0-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.7.1-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.7.0-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.6.1-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.6.0-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.5.2-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.5.1-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.5.0-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.4.0-py3-none-any.whl.metadata (3.5 kB)
-  Using cached pydantic_settings-2.3.4-py3-none-any.whl.metadata (3.3 kB)
-  Using cached pydantic_settings-2.3.3-py3-none-any.whl.metadata (3.3 kB)
-  Using cached pydantic_settings-2.3.2-py3-none-any.whl.metadata (3.3 kB)
-  Using cached pydantic_settings-2.3.1-py3-none-any.whl.metadata (3.3 kB)
-  Using cached pydantic_settings-2.3.0-py3-none-any.whl.metadata (3.3 kB)
-  Using cached pydantic_settings-2.2.1-py3-none-any.whl.metadata (3.1 kB)
-  Using cached pydantic_settings-2.2.0-py3-none-any.whl.metadata (3.1 kB)
-  Using cached pydantic_settings-2.1.0-py3-none-any.whl.metadata (2.9 kB)
-  Using cached pydantic_settings-2.0.3-py3-none-any.whl.metadata (2.9 kB)
-  Using cached pydantic_settings-2.0.2-py3-none-any.whl.metadata (2.9 kB)
-  Using cached pydantic_settings-2.0.1-py3-none-any.whl.metadata (2.8 kB)
-  Using cached pydantic_settings-2.0.0-py3-none-any.whl.metadata (2.9 kB)
-  Using cached pydantic_settings-1.99-py3-none-any.whl.metadata (3.8 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.0a3-py3-none-any.whl.metadata (114 kB)
-Collecting pydantic-core==0.25.0 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-0.25.0-cp38-cp38-macosx_11_0_arm64.whl.metadata (7.2 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.10.5-py3-none-any.whl.metadata (30 kB)
-  Downloading pydantic-2.10.4-py3-none-any.whl.metadata (29 kB)
-  Downloading pydantic-2.10.3-py3-none-any.whl.metadata (172 kB)
-Collecting pydantic-core==2.27.1 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.27.1-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.6 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.10.2-py3-none-any.whl.metadata (170 kB)
-  Using cached pydantic-2.10.1-py3-none-any.whl.metadata (169 kB)
-  Downloading pydantic-2.10.0-py3-none-any.whl.metadata (167 kB)
-Collecting pydantic-core==2.27.0 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.27.0-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.6 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.9.2-py3-none-any.whl.metadata (149 kB)
-Collecting pydantic-core==2.23.4 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.23.4-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.6 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.10.0b2-py3-none-any.whl.metadata (167 kB)
-  Downloading pydantic-2.9.1-py3-none-any.whl.metadata (146 kB)
-Collecting pydantic-core==2.23.3 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.23.3-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.6 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.9.0-py3-none-any.whl.metadata (146 kB)
-Collecting pydantic-core==2.23.2 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.23.2-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.6 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.8.2-py3-none-any.whl.metadata (125 kB)
-Collecting pydantic-core==2.20.1 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.20.1-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.6 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.8.1-py3-none-any.whl.metadata (124 kB)
-  Downloading pydantic-2.8.0-py3-none-any.whl.metadata (123 kB)
-Collecting pydantic-core==2.20.0 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.20.0-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.6 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.7.4-py3-none-any.whl.metadata (109 kB)
-Collecting pydantic-core==2.18.4 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.18.4-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.5 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.7.3-py3-none-any.whl.metadata (108 kB)
-  Downloading pydantic-2.7.2-py3-none-any.whl.metadata (108 kB)
-Collecting pydantic-core==2.18.3 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.18.3-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.5 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.7.1-py3-none-any.whl.metadata (107 kB)
-Collecting pydantic-core==2.18.2 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.18.2-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.5 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.7.0-py3-none-any.whl.metadata (103 kB)
-Collecting pydantic-core==2.18.1 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.18.1-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.5 kB)
-Collecting pydantic>=1.10.0 (from -r requirements.txt (line 8))
-  Downloading pydantic-2.6.4-py3-none-any.whl.metadata (85 kB)
-Collecting pydantic-core==2.16.3 (from pydantic>=1.10.0->-r requirements.txt (line 8))
-  Downloading pydantic_core-2.16.3-cp38-cp38-macosx_11_0_arm64.whl.metadata (6.5 kB)
-INFO: pip is looking at multiple versions of pydantic-settings to determine which version is compatible with other requirements. This could take a while.
-INFO: pip is still looking at multiple versions of pydantic-settings to determine which version is compatible with other requirements. This could take a while.
-INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
-Collecting fastapi>=0.100.0 (from -r requirements.txt (line 4))
-  Downloading fastapi-0.123.7-py3-none-any.whl.metadata (30 kB)
-Collecting uvicorn>=0.23.0 (from uvicorn[standard]>=0.23.0->-r requirements.txt (line 5))
-  Downloading uvicorn-0.32.1-py3-none-any.whl.metadata (6.6 kB)
-  Downloading uvicorn-0.32.0-py3-none-any.whl.metadata (6.6 kB)
-  Downloading uvicorn-0.31.1-py3-none-any.whl.metadata (6.6 kB)
-  Downloading uvicorn-0.31.0-py3-none-any.whl.metadata (6.6 kB)
-  Downloading uvicorn-0.30.6-py3-none-any.whl.metadata (6.6 kB)
-  Downloading uvicorn-0.30.5-py3-none-any.whl.metadata (6.6 kB)
-  Downloading uvicorn-0.30.4-py3-none-any.whl.metadata (6.6 kB)
-  Downloading uvicorn-0.30.3-py3-none-any.whl.metadata (6.5 kB)
-  Downloading uvicorn-0.30.2-py3-none-any.whl.metadata (6.5 kB)
-  Downloading uvicorn-0.30.1-py3-none-any.whl.metadata (6.3 kB)
-  Downloading uvicorn-0.30.0-py3-none-any.whl.metadata (6.3 kB)
-  Downloading uvicorn-0.29.0-py3-none-any.whl.metadata (6.3 kB)
-  Downloading uvicorn-0.28.1-py3-none-any.whl.metadata (6.3 kB)
-  Downloading uvicorn-0.28.0-py3-none-any.whl.metadata (6.3 kB)
-  Using cached uvicorn-0.27.1-py3-none-any.whl.metadata (6.3 kB)
-  Downloading uvicorn-0.27.0.post1-py3-none-any.whl.metadata (6.4 kB)
-  Downloading uvicorn-0.27.0-py3-none-any.whl.metadata (6.4 kB)
-  Downloading uvicorn-0.26.0-py3-none-any.whl.metadata (6.4 kB)
-  Downloading uvicorn-0.25.0-py3-none-any.whl.metadata (6.4 kB)
-  Downloading uvicorn-0.24.0.post1-py3-none-any.whl.metadata (6.4 kB)
-  Using cached uvicorn-0.24.0-py3-none-any.whl.metadata (6.4 kB)
-  Downloading uvicorn-0.23.2-py3-none-any.whl.metadata (6.2 kB)
-  Downloading uvicorn-0.23.1-py3-none-any.whl.metadata (6.2 kB)
-  Downloading uvicorn-0.23.0-py3-none-any.whl.metadata (6.1 kB)
 ERROR: Exception:
 Traceback (most recent call last):
-  File "/Users/rbmsoft/RBM/AI-ML-PlayGround/ai-ml-playground-be-fastapi/venv/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 106, in _run_wrapper
-    status = _inner_run()
-  File "/Users/rbmsoft/RBM/AI-ML-PlayGround/ai-ml-playground-be-fastapi/venv/lib/python3.8/site-packages/pip/_internal/cli/base_command.py", line 97, in _inner_run
-    return self.run(options, args)
-  File "/Users/rbmsoft/RBM/AI-ML-PlayGround/ai-ml-playground-be-fastapi/venv/lib/python3.8/site-packages/pip/_internal/cli/req_command.py", line 67, in wrapper
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/cli/base_command.py", line 180, in exc_logging_wrapper
+    status = run_func(*args)
+             ^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/cli/req_command.py", line 245, in wrapper
     return func(self, options, args)
-  File "/Users/rbmsoft/RBM/AI-ML-PlayGround/ai-ml-playground-be-fastapi/venv/lib/python3.8/site-packages/pip/_internal/commands/install.py", line 386, in run
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/commands/install.py", line 377, in run
     requirement_set = resolver.resolve(
-  File "/Users/rbmsoft/RBM/AI-ML-PlayGround/ai-ml-playground-be-fastapi/venv/lib/python3.8/site-packages/pip/_internal/resolution/resolvelib/resolver.py", line 95, in resolve
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/resolver.py", line 95, in resolve
     result = self._result = resolver.resolve(
-  File "/Users/rbmsoft/RBM/AI-ML-PlayGround/ai-ml-playground-be-fastapi/venv/lib/python3.8/site-packages/pip/_vendor/resolvelib/resolvers.py", line 546, in resolve
+                            ^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_vendor/resolvelib/resolvers.py", line 546, in resolve
     state = resolution.resolve(requirements, max_rounds=max_rounds)
-  File "/Users/rbmsoft/RBM/AI-ML-PlayGround/ai-ml-playground-be-fastapi/venv/lib/python3.8/site-packages/pip/_vendor/resolvelib/resolvers.py", line 457, in resolve
-    raise ResolutionTooDeep(max_rounds)
-pip._vendor.resolvelib.resolvers.ResolutionTooDeep: 200000
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_vendor/resolvelib/resolvers.py", line 397, in resolve
+    self._add_to_criteria(self.state.criteria, r, parent=None)
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_vendor/resolvelib/resolvers.py", line 173, in _add_to_criteria
+    if not criterion.candidates:
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_vendor/resolvelib/structs.py", line 156, in __bool__
+    return bool(self._sequence)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py", line 155, in __bool__
+    return any(self)
+           ^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py", line 143, in <genexpr>
+    return (c for c in iterator if id(c) not in self._incompatible_ids)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py", line 47, in _iter_built
+    candidate = func()
+                ^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/factory.py", line 182, in _make_candidate_from_link
+    base: Optional[BaseCandidate] = self._make_base_candidate_from_link(
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/factory.py", line 228, in _make_base_candidate_from_link
+    self._link_candidate_cache[link] = LinkCandidate(
+                                       ^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 290, in __init__
+    super().__init__(
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 156, in __init__
+    self.dist = self._prepare()
+                ^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 222, in _prepare
+    dist = self._prepare_distribution()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/resolution/resolvelib/candidates.py", line 301, in _prepare_distribution
+    return preparer.prepare_linked_requirement(self._ireq, parallel_builds=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/operations/prepare.py", line 525, in prepare_linked_requirement
+    return self._prepare_linked_requirement(req, parallel_builds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/operations/prepare.py", line 640, in _prepare_linked_requirement
+    dist = _get_prepared_distribution(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/operations/prepare.py", line 71, in _get_prepared_distribution
+    abstract_dist.prepare_distribution_metadata(
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/distributions/sdist.py", line 54, in prepare_distribution_metadata
+    self._install_build_reqs(finder)
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/distributions/sdist.py", line 124, in _install_build_reqs
+    build_reqs = self._get_build_requires_wheel()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/distributions/sdist.py", line 101, in _get_build_requires_wheel
+    return backend.get_requires_for_build_wheel()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_internal/utils/misc.py", line 745, in get_requires_for_build_wheel
+    return super().get_requires_for_build_wheel(config_settings=cs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_impl.py", line 166, in get_requires_for_build_wheel
+    return self._call_hook('get_requires_for_build_wheel', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_impl.py", line 321, in _call_hook
+    raise BackendUnavailable(data.get('traceback', ''))
+pip._vendor.pyproject_hooks._impl.BackendUnavailable: Traceback (most recent call last):
+  File "/home/rbm/RBMProjects/RBM-AI-ML/ai-ml-playground-be-fastapi/venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 77, in _build_backend
+    obj = import_module(mod_path)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/tmp/pip-build-env-52bia2ft/overlay/lib/python3.12/site-packages/setuptools/__init__.py", line 10, in <module>
+    import distutils.core
+ModuleNotFoundError: No module named 'distutils'
+

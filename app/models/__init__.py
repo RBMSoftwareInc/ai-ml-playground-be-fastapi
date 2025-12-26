@@ -25,6 +25,40 @@ from app.models.devlab import (
 )
 from app.models.discovery import DiscoveryTool, DiscoveryToolExecution
 from app.models.content import ContentVersion, ContentSync
+from app.models.intelligence import (
+    IntelligenceContent, IntelligenceConversation, WorkflowComparison, ModelHonestyMetadata,
+    ContentCategory, ConfidenceLevel
+)
+from app.models.fintech import (
+    # Credit Risk
+    BorrowerProfile, CreditHistorySummary, FinancialBehavior,
+    MacroEconomicContext, CreditOutcome,
+    # Fraud Detection
+    TransactionEvent, AccountProfile, DeviceContext,
+    BehavioralPattern, FraudLabel,
+    # KYC/AML
+    CustomerIdentity, IdentityVerificationSignals, JurisdictionRisk,
+    RelationshipNetwork, ComplianceOutcome,
+    # Market Signal
+    MarketEnvironment, NewsSignal, SentimentAggregate, MarketContextLabel,
+    # Regime Simulation
+    MarketTimeSeries, RegimeState, StressScenarioProfile,
+    # Market & Digital Asset Intelligence
+    CommodityMarketData, CommodityTrendSignal, MarketRegimeFeature,
+    DigitalAssetAdoptionData, DigitalAssetAdoptionSignal,
+    ExchangeProfile, ExchangeRiskSignal
+)
+from app.models.travel import (
+    # Pricing & Revenue Intelligence
+    PricingEvent, PricingRecommendation,
+    BookingHistory, DemandForecast,
+    # Personalized Travel Intelligence
+    TravelerProfile, TravelerIntent, RecommendationResult,
+    ConversationContext,
+    # Operational Intelligence
+    RouteSegment, RouteOptimization,
+    HotelProfile, HotelMatch
+)
 
 __all__ = [
     # Core
@@ -71,4 +105,61 @@ __all__ = [
     # Content Management
     "ContentVersion",
     "ContentSync",
+    # Intelligence Content Store
+    "IntelligenceContent",
+    "IntelligenceConversation",
+    "WorkflowComparison",
+    "ModelHonestyMetadata",
+    "ContentCategory",
+    "ConfidenceLevel",
+    # Fintech - Credit Risk
+    "BorrowerProfile",
+    "CreditHistorySummary",
+    "FinancialBehavior",
+    "MacroEconomicContext",
+    "CreditOutcome",
+    # Fintech - Fraud Detection
+    "TransactionEvent",
+    "AccountProfile",
+    "DeviceContext",
+    "BehavioralPattern",
+    "FraudLabel",
+    # Fintech - KYC/AML
+    "CustomerIdentity",
+    "IdentityVerificationSignals",
+    "JurisdictionRisk",
+    "RelationshipNetwork",
+    "ComplianceOutcome",
+    # Fintech - Market Signal
+    "MarketEnvironment",
+    "NewsSignal",
+    "SentimentAggregate",
+    "MarketContextLabel",
+    # Fintech - Regime Simulation
+    "MarketTimeSeries",
+    "RegimeState",
+    "StressScenarioProfile",
+    # Fintech - Market & Digital Asset Intelligence
+    "CommodityMarketData",
+    "CommodityTrendSignal",
+    "MarketRegimeFeature",
+    "DigitalAssetAdoptionData",
+    "DigitalAssetAdoptionSignal",
+    "ExchangeProfile",
+    "ExchangeRiskSignal",
+    # Travel - Pricing & Revenue Intelligence
+    "PricingEvent",
+    "PricingRecommendation",
+    "BookingHistory",
+    "DemandForecast",
+    # Travel - Personalized Travel Intelligence
+    "TravelerProfile",
+    "TravelerIntent",
+    "RecommendationResult",
+    "ConversationContext",
+    # Travel - Operational Intelligence
+    "RouteSegment",
+    "RouteOptimization",
+    "HotelProfile",
+    "HotelMatch",
 ]

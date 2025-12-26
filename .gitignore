@@ -46,3 +46,5 @@ Thumbs.db
 trained_models/
 uploads/
 *.log
+.history
+=1.26.0

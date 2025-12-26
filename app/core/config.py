@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = os.getenv(
         "DATABASE_URL",
-        "postgresql://rbmsoft@localhost:5432/rbm_ai_ml_playground"
+        "postgresql://postgres:postgres@localhost:5432/rbm_ai_ml_playground"
     )
     
     # CORS

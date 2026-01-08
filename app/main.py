@@ -2,6 +2,20 @@
 FastAPI Main Application
 AI/ML Playground Backend - Comprehensive API for all industries and use cases
 """
+import os
+import warnings
+
+# Suppress TensorFlow and ML library warnings on startup
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow INFO/WARNING
+os.environ['TOKENIZERS_PARALLELISM'] = 'false'  # Suppress tokenizer warnings
+
+# Suppress Python warnings from ML libraries
+warnings.filterwarnings('ignore', category=FutureWarning)
+warnings.filterwarnings('ignore', message='.*tensorflow.*')
+warnings.filterwarnings('ignore', message='.*keras.*')
+warnings.filterwarnings('ignore', message='.*transformers.*')
+warnings.filterwarnings('ignore', message='.*slow image processor.*')
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse

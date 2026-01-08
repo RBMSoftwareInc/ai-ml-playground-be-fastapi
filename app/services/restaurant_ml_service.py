@@ -106,7 +106,8 @@ class RestaurantMLService:
         # Save feature columns for later use
         self.feature_columns = feature_cols
         
-        print("✓ Trained restaurant demand forecasting model")
+        # Suppress startup logging - model loads when actually used
+        # print("✓ Trained restaurant demand forecasting model")
     
     def predict_demand_forecast(
         self,
@@ -379,6 +380,21 @@ class RestaurantMLService:
         }
 
 
-# Global instance
-restaurant_ml_service = RestaurantMLService()
+# Lazy-loaded global instance (only initialized when first accessed)
+_restaurant_ml_service_instance = None
+
+def get_restaurant_ml_service() -> RestaurantMLService:
+    """Get or create restaurant ML service instance (lazy initialization)"""
+    global _restaurant_ml_service_instance
+    if _restaurant_ml_service_instance is None:
+        _restaurant_ml_service_instance = RestaurantMLService()
+    return _restaurant_ml_service_instance
+
+# For backward compatibility, create a property-like accessor
+class _RestaurantMLServiceProxy:
+    """Proxy class for lazy initialization"""
+    def __getattr__(self, name):
+        return getattr(get_restaurant_ml_service(), name)
+
+restaurant_ml_service = _RestaurantMLServiceProxy()
 

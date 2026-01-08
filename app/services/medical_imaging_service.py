@@ -11,7 +11,7 @@ from app.schemas.diagnostic_ai import (
     AnatomicalRegion, Observation, Likelihood, Explainability, ExplainabilityArtifact,
     ObservationWithLikelihood, DiagnosticAIAnalysisResponse
 )
-from app.services.radiology_ml_service import radiology_ml_service
+from app.services.radiology_ml_service import get_radiology_ml_service
 try:
     import pydicom
     DICOM_AVAILABLE = True
@@ -26,9 +26,24 @@ class MedicalImagingService:
     """
     
     def __init__(self):
-        """Initialize medical imaging service with ML models"""
-        self.radiology_ml = radiology_ml_service
-        self.model_version = f"densenet121_mura_v{self.radiology_ml.model_version}"
+        """Initialize medical imaging service with ML models (lazy-loaded)"""
+        # Don't initialize radiology_ml_service here - lazy load on first use
+        self._radiology_ml = None
+        self._model_version = None
+    
+    @property
+    def radiology_ml(self):
+        """Lazy-load radiology ML service"""
+        if self._radiology_ml is None:
+            self._radiology_ml = get_radiology_ml_service()
+        return self._radiology_ml
+    
+    @property
+    def model_version(self):
+        """Lazy-load model version"""
+        if self._model_version is None:
+            self._model_version = f"densenet121_mura_v{self.radiology_ml.model_version}"
+        return self._model_version
     
     def analyze_medical_image(
         self,
@@ -298,4 +313,20 @@ class MedicalImagingService:
 
 
 # Global instance
-medical_imaging_service = MedicalImagingService()
+# Lazy-loaded global instance (only initialized when first accessed)
+_medical_imaging_service_instance = None
+
+def get_medical_imaging_service() -> MedicalImagingService:
+    """Get or create medical imaging service instance (lazy initialization)"""
+    global _medical_imaging_service_instance
+    if _medical_imaging_service_instance is None:
+        _medical_imaging_service_instance = MedicalImagingService()
+    return _medical_imaging_service_instance
+
+# For backward compatibility, create a property-like accessor
+class _MedicalImagingServiceProxy:
+    """Proxy class for lazy initialization"""
+    def __getattr__(self, name):
+        return getattr(get_medical_imaging_service(), name)
+
+medical_imaging_service = _MedicalImagingServiceProxy()

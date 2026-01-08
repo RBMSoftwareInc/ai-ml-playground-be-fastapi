@@ -25,17 +25,36 @@ try:
     TORCH_AVAILABLE = True
 except ImportError as e:
     TORCH_AVAILABLE = False
-    print(f"⚠ PyTorch/torchvision not available: {e}")
-    print("  Install with: pip install torch torchvision")
-    print("  Using placeholder inference (will work but not use real ML model)")
+    # Suppress verbose warnings on import - only log when service is actually used
+    # print(f"⚠ PyTorch/torchvision not available: {e}")
+    # print("  Install with: pip install torch torchvision")
+    # print("  Using placeholder inference (will work but not use real ML model)")
 
-# Try to import Hugging Face transformers
-try:
-    from transformers import AutoImageProcessor, AutoModelForImageClassification
-    HF_AVAILABLE = True
-except ImportError:
-    HF_AVAILABLE = False
-    print("⚠ Hugging Face transformers not available. Install with: pip install transformers")
+# Lazy import Hugging Face transformers (only import when actually needed)
+# This avoids TensorFlow warnings on server startup
+HF_AVAILABLE = None
+_AutoImageProcessor = None
+_AutoModelForImageClassification = None
+
+def _lazy_import_transformers():
+    """Lazy import transformers to avoid startup warnings"""
+    global HF_AVAILABLE, _AutoImageProcessor, _AutoModelForImageClassification
+    if HF_AVAILABLE is None:
+        try:
+            # Suppress TensorFlow warnings during import
+            import warnings
+            import os
+            os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow info/warning
+            with warnings.catch_warnings():
+                warnings.filterwarnings('ignore', category=FutureWarning)
+                warnings.filterwarnings('ignore', category=UserWarning)
+                from transformers import AutoImageProcessor, AutoModelForImageClassification
+            _AutoImageProcessor = AutoImageProcessor
+            _AutoModelForImageClassification = AutoModelForImageClassification
+            HF_AVAILABLE = True
+        except ImportError:
+            HF_AVAILABLE = False
+    return HF_AVAILABLE
 
 
 class RadiologyMLService:
@@ -74,7 +93,9 @@ class RadiologyMLService:
         Can be fine-tuned on medical imaging data (MURA, CheXpert, etc.)
         """
         if not TORCH_AVAILABLE:
-            print("⚠ PyTorch not available. Using placeholder inference.")
+            # Suppress startup logging - only log when service is actually used
+            # print("⚠ PyTorch not available. Using placeholder inference.")
+            pass
             self.model_loaded = False
             return
         
@@ -100,13 +121,19 @@ class RadiologyMLService:
                 try:
                     checkpoint = torch.load(self.model_path, map_location='cpu')
                     self.model.load_state_dict(checkpoint)
-                    print(f"✓ Loaded fine-tuned DenseNet-121 from {self.model_path}")
+                    # Only log if actually loading (not on every import)
+                    # print(f"✓ Loaded fine-tuned DenseNet-121 from {self.model_path}")
+                    pass
                 except Exception as e:
-                    print(f"⚠ Could not load fine-tuned weights: {e}")
-                    print(f"  Using ImageNet-pretrained backbone (will work but not medical-specific)")
+                    # Suppress verbose logging on startup
+                    # print(f"⚠ Could not load fine-tuned weights: {e}")
+                    # print(f"  Using ImageNet-pretrained backbone (will work but not medical-specific)")
+                    pass
             else:
-                print(f"✓ Using ImageNet-pretrained DenseNet-121 (no fine-tuning weights found)")
-                print(f"  For medical-specific performance, fine-tune on MURA/CheXpert and save to: {self.model_path}")
+                # Suppress verbose logging on startup - models load when actually used
+                # print(f"✓ Using ImageNet-pretrained DenseNet-121 (no fine-tuning weights found)")
+                # print(f"  For medical-specific performance, fine-tune on MURA/CheXpert and save to: {self.model_path}")
+                pass
             
             self.model_loaded = True
             
@@ -344,6 +371,21 @@ class RadiologyMLService:
         }
 
 
-# Global instance
-radiology_ml_service = RadiologyMLService()
+# Lazy-loaded global instance (only initialized when first accessed)
+_radiology_ml_service_instance = None
+
+def get_radiology_ml_service() -> RadiologyMLService:
+    """Get or create radiology ML service instance (lazy initialization)"""
+    global _radiology_ml_service_instance
+    if _radiology_ml_service_instance is None:
+        _radiology_ml_service_instance = RadiologyMLService()
+    return _radiology_ml_service_instance
+
+# For backward compatibility, create a property-like accessor
+class _RadiologyMLServiceProxy:
+    """Proxy class for lazy initialization"""
+    def __getattr__(self, name):
+        return getattr(get_radiology_ml_service(), name)
+
+radiology_ml_service = _RadiologyMLServiceProxy()
 

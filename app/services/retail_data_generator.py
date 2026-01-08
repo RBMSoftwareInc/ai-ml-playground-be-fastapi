@@ -366,8 +366,14 @@ class RetailDataGenerator:
         events = self.footfall_events
         
         if start_time:
+            # Ensure timezone-naive for comparison
+            if start_time.tzinfo is not None:
+                start_time = start_time.replace(tzinfo=None)
             events = [e for e in events if e.timestamp >= start_time]
         if end_time:
+            # Ensure timezone-naive for comparison
+            if end_time.tzinfo is not None:
+                end_time = end_time.replace(tzinfo=None)
             events = [e for e in events if e.timestamp <= end_time]
         if zone_id:
             events = [e for e in events if e.zone_id == zone_id]
@@ -391,8 +397,14 @@ class RetailDataGenerator:
         events = self.queue_events
         
         if start_time:
+            # Ensure timezone-naive for comparison
+            if start_time.tzinfo is not None:
+                start_time = start_time.replace(tzinfo=None)
             events = [e for e in events if e.timestamp >= start_time]
         if end_time:
+            # Ensure timezone-naive for comparison
+            if end_time.tzinfo is not None:
+                end_time = end_time.replace(tzinfo=None)
             events = [e for e in events if e.timestamp <= end_time]
         if counter_id:
             events = [e for e in events if e.counter_id == counter_id]
@@ -415,8 +427,14 @@ class RetailDataGenerator:
         events = self.pos_events
         
         if start_time:
+            # Ensure timezone-naive for comparison
+            if start_time.tzinfo is not None:
+                start_time = start_time.replace(tzinfo=None)
             events = [e for e in events if e.timestamp >= start_time]
         if end_time:
+            # Ensure timezone-naive for comparison
+            if end_time.tzinfo is not None:
+                end_time = end_time.replace(tzinfo=None)
             events = [e for e in events if e.timestamp <= end_time]
         
         return [{
@@ -438,8 +456,14 @@ class RetailDataGenerator:
         events = self.suspicious_events
         
         if start_time:
+            # Ensure timezone-naive for comparison
+            if start_time.tzinfo is not None:
+                start_time = start_time.replace(tzinfo=None)
             events = [e for e in events if e.timestamp >= start_time]
         if end_time:
+            # Ensure timezone-naive for comparison
+            if end_time.tzinfo is not None:
+                end_time = end_time.replace(tzinfo=None)
             events = [e for e in events if e.timestamp <= end_time]
         if min_risk_score is not None:
             events = [e for e in events if e.risk_score >= min_risk_score]

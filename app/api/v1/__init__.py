@@ -2,7 +2,7 @@
 API v1 Routes
 """
 from fastapi import APIRouter
-from app.api.v1 import ecommerce, healthcare, fintech, travel, hospitality, entertainment, manufacturing, realestate, retail, webhooks, intelligence
+from app.api.v1 import ecommerce, healthcare, fintech, travel, hospitality, entertainment, manufacturing, realestate, retail, webhooks, intelligence, admin, auth, workflow
 
 api_router = APIRouter()
 
@@ -22,6 +22,15 @@ api_router.include_router(webhooks.router, prefix="/webhooks", tags=["Webhooks"]
 
 # Intelligence Content Store routes (Category 1 - Global Intelligence Foundation)
 api_router.include_router(intelligence.router, prefix="/intelligence", tags=["Intelligence"])
+
+# Authentication routes
+api_router.include_router(auth.router, tags=["Authentication"])
+
+# Admin Panel routes
+api_router.include_router(admin.router, tags=["Admin"])
+
+# CMS Workflow routes
+api_router.include_router(workflow.router, tags=["CMS Workflow"])
 
 # Legacy endpoints for backward compatibility
 api_router.include_router(ecommerce.router, prefix="", tags=["Legacy E-commerce"])

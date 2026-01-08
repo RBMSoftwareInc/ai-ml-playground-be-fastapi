@@ -25,6 +25,17 @@ from app.models.devlab import (
 )
 from app.models.discovery import DiscoveryTool, DiscoveryToolExecution
 from app.models.content import ContentVersion, ContentSync
+from app.models.admin import (
+    ContentAsset, Theme, ContentBlock, ActionDefinition,
+    OutputTheme, AIModelConfiguration, ContentAuditLog
+)
+from app.models.auth import (
+    Role, Permission, UserRole, RolePermission, RefreshToken, LoginAttempt
+)
+from app.models.cms_workflow import (
+    WorkflowContentVersion, ContentApproval, WorkflowDefinition,
+    ContentSchedule, CMSSettings, ContentStatus, ContentProject
+)
 from app.models.intelligence import (
     IntelligenceContent, IntelligenceConversation, WorkflowComparison, ModelHonestyMetadata,
     ContentCategory, ConfidenceLevel
@@ -105,6 +116,28 @@ __all__ = [
     # Content Management
     "ContentVersion",
     "ContentSync",
+    # Admin & CMS
+    "ContentAsset",
+    "Theme",
+    "ContentBlock",
+    "ActionDefinition",
+    "OutputTheme",
+    "AIModelConfiguration",
+    "ContentAuditLog",
+    # Auth & RBAC
+    "Role",
+    "Permission",
+    "UserRole",
+    "RolePermission",
+    "RefreshToken",
+    "LoginAttempt",
+    # CMS Workflow
+    "WorkflowContentVersion",
+    "ContentApproval",
+    "WorkflowDefinition",
+    "ContentSchedule",
+    "CMSSettings",
+    "ContentStatus",
     # Intelligence Content Store
     "IntelligenceContent",
     "IntelligenceConversation",

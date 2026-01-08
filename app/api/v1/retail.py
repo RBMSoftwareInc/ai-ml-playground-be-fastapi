@@ -25,12 +25,18 @@ class TimeWindowRequest(BaseModel):
 
 
 def _parse_datetime(dt_str: Optional[str], default_offset_hours: int = 0) -> datetime:
-    """Parse datetime string or return default"""
+    """Parse datetime string or return default (always timezone-naive)"""
     if dt_str:
         try:
-            return datetime.fromisoformat(dt_str.replace('Z', '+00:00'))
+            # Parse datetime (may be timezone-aware or naive)
+            dt = datetime.fromisoformat(dt_str.replace('Z', '+00:00'))
+            # Convert to timezone-naive if needed (remove timezone info)
+            if dt.tzinfo is not None:
+                dt = dt.replace(tzinfo=None)
+            return dt
         except:
             pass
+    # Return timezone-naive datetime
     return datetime.now() - timedelta(hours=default_offset_hours)
 
 

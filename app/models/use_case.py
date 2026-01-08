@@ -14,12 +14,12 @@ class UseCaseCategory(Base):
     id = Column(Integer, primary_key=True, index=True)
     category_id = Column(String(100), unique=True, index=True, nullable=False)
     name = Column(String(255), nullable=False)
-    icon = Column(String(10))
+    icon = Column(String(50))  # Increased from 10 to 50 to accommodate Material-UI icon names
     description = Column(Text)
     display_order = Column(Integer, default=0)
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+    updated_at = Column(DateTime(timezone=True), nullable=True, onupdate=func.now())
 
 
 class UseCase(Base):
@@ -37,7 +37,7 @@ class UseCase(Base):
     theory_content = Column(Text)  # Educational content
     keywords = Column(JSON)  # Array of keywords
     tips = Column(JSON)  # Array of tips/guidance
-    icon = Column(String(10))
+    icon = Column(String(50))  # Increased from 10 to 50 to accommodate Material-UI icon names
     interactive_route = Column(String(255))
     industry_route = Column(String(255))
     api_endpoint = Column(String(255))  # API endpoint path
@@ -46,7 +46,7 @@ class UseCase(Base):
     display_order = Column(Integer, default=0)
     meta_data = Column(JSON)  # Additional metadata
     created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+    updated_at = Column(DateTime(timezone=True), nullable=True, onupdate=func.now())
     
     # Relationships
     executions = relationship("UseCaseExecution", back_populates="use_case")

@@ -2,6 +2,7 @@
 User Model
 """
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, Text
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from app.core.database import Base
 
@@ -25,4 +26,7 @@ class User(Base):
     preferred_industry = Column(String(50))
     preferred_language = Column(String(10), default="en")
     timezone = Column(String(50), default="UTC")
+    
+    # Relationships
+    user_roles = relationship("UserRole", back_populates="user", foreign_keys="UserRole.user_id")
 
